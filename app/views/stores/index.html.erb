@@ -1,0 +1,16 @@
+<h1>Store#index</h1>
+<p>Find me in app/views/store/index.html.erb</p>
+
+
+<table>
+<% @stores.each do |store| %>
+<tr>
+	<td>
+  <%= link_to store.name, :controller => "stores", :id => store, :action => "show" %>
+	</td>
+	<td>
+		<%= link_to "Edit", :controller => "stores", :id => store, :action => "edit" %>
+	</td>
+</tr>
+<% end %>
+</table>
