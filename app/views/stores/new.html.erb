@@ -1,2 +1,10 @@
 <h1>Store#new</h1>
 <p>Find me in app/views/store/new.html.erb</p>
+
+<%= form_tag(controller: "stores", action: "create", method: "post") do %>
+  Name: <%= text_field_tag("name") %><br>
+  Town: <%= text_field_tag("town") %>
+  <p>
+  <%= submit_tag("Create!") %>
+<% end %>
+

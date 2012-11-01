@@ -11,6 +11,8 @@ class StoresController < ApplicationController
   end
 
   def create
+    Store.create(params.select { |k, v| Store.accessible_attributes.include?(k) })
+    redirect_to controller: 'stores', action: 'index'
   end
 
   def edit
@@ -18,5 +20,7 @@ class StoresController < ApplicationController
   end
 
   def destroy
+    @store = Store.find(params[:id])
+    @store.destroy
   end
 end

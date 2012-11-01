@@ -1,0 +1,7 @@
+TODO:
+=====
+De-dupe edit and creation forms (define form in one place, use in both)
+Create fruit and associte w stores (stores have fruit inventory)
+Create a "customer" view - see which fruit stores have
+Use asset pipeline for something (move jQuery for delete button to separate file)
+Use login gems - require login to manage stores, not for public view

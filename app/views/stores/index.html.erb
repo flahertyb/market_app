@@ -11,6 +11,24 @@
 	<td>
 		<%= link_to "Edit", :controller => "stores", :id => store, :action => "edit" %>
 	</td>
+  <td>
+    <a href="" data-id="<%= store.id %>" class="delete">Delete</a>
+  </td>
 </tr>
 <% end %>
 </table>
+
+<p><a href="/stores/new">New store</a>
+
+
+<script type="text/javascript">
+  $(function () {
+    $("a.delete").click(function () {
+      $.ajax({
+        type: 'DELETE', 
+        url: '/stores/destroy',
+        data: {id: $(this).data('id')}
+      });
+    });
+  });
+</script>

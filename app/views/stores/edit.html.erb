@@ -2,18 +2,9 @@
 <p>Find me in app/views/store/edit.html.erb</p>
 
 <%= form_tag(controller: "stores", action: "save", method: "put") do %>
-<label></label>
 	<%= text_field_tag("Name", @store.name ) %>
-
+  <%= text_field_tag("Town", @store.town ) %>
+  <p>
+  <%= submit_tag("Create!") %>
 <% end %>
 
-<%= form_tag(controller: "stores", action: "save", method: "put") do
-  "<label></label>" +
-  text_field_tag("Name", @store.name )
-end %>
-
-
-form_tag(controller: "stores", action: "save", method: "put") do
-  "<label></label>"+
-	text_field_tag("Name", @store.name )
-end
