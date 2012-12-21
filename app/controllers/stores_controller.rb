@@ -23,4 +23,11 @@ class StoresController < ApplicationController
     @store = Store.find(params[:id])
     @store.destroy
   end
+
+  def save
+    @store = Store.find(params[:id])
+    @store.update_attributes(:name => params[:name], :town => params[:town])
+    @store.save
+    redirect_to controller: 'stores', action: 'index'
+  end
 end
