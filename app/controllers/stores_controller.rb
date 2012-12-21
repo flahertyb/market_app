@@ -25,6 +25,8 @@ class StoresController < ApplicationController
   end
 
   def save
+    Rails.logger.debug request.inspect
+
     @store = Store.find(params[:id])
     @store.update_attributes(:name => params[:name], :town => params[:town])
     @store.save

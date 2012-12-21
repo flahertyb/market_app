@@ -1,11 +1,10 @@
 <h1>Store#edit</h1>
 <p>Find me in app/views/store/edit.html.erb</p>
 
-<%= form_tag({controller: "stores", action: "save", id: @store.id}, {method: "put"}) do %>
-  <label>Name</label>
-	<%= text_field_tag("name", @store.name ) %>
-  <%= text_field_tag("town", @store.town ) %>
-  <p>
-  <%= submit_tag("Save!") %>
-<% end %>
+<form>
 
+<input type="text" class="name-field" value="<%= @store.name %>">
+<input type="text" class="town-field" value="<%= @store.town %>">
+
+<button id="random">random</button>
+</form>
